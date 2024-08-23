@@ -13,11 +13,11 @@
 ## Methodology
 Logistic regression will be used to solve the classification problem, since interpretability is extremely important in this study, and this also takes into account the rank nature of the answers to the question.  
 It was decided that a two-stage classification was more appropriate.  
-__In the first stage__ we must maximize _Recall_ (TRP), because H recognition is the highest priority and also not forget about _Precission_ (PPV), but if a FH is identified as a H, it is not a big loss. The F-score metric with a weight equal to the ratio of 4:1, that is, 0.8, is best suited for this.  
-__In the second stage__, just _accuracy_ will be used as a metric to separate "hf" and "f".  
+__In the first stage__ we must maximize _Recall_ (TRP), because H recognition is the highest priority and also not forget about _Precission_ (PPV), but if for example a FH is identified as a H, it is not a big loss. The F-score metric with a weight equal to the ratio of 4:1, that is, 0.8, is best suited for this.  
+__In the second stage__, just _accuracy_ will be used as a metric to separate "hx" and "x".  
 Also, since the sample is small and the variance associated with VAR is high, it is necessary to use a CV of reducing it.
 ## Results
-Based on the results of training and testing of models, the model proved to be the most effective when dividing data by gender, reaching F1 measures (since no way has yet been developed to use F4) 0.95 for men and 0.98 for women, this is probably due to the larger statistics of this group., compared with 0.83 without gender separation on test data. This model is able to accurately determine the level of gender bias of respondents.  
+Based on the results of training and testing of models, the model proved to be the most effective when dividing data by gender, reaching F1 measures (since no way has yet been developed to use F4) 0.95 for men and 0.98 for women, this is probably due to the larger statistics of this group, compared with 0.83 without gender separation on test data. This model is able to accurately determine the level of gender bias of respondents.  
 ## Conclusions   
 The best features have also been selected:
 - CO_3
@@ -25,9 +25,9 @@ The best features have also been selected:
 - WA_4
 - WBW_7  
 
-##__Future plans:__
+## _Future plans:_
 - Make a multi-class classification based on probabilities. This will correspond to the spirit of research to a more significant extent, because there are no "pure" types, and each person is an amalgam in a certain proportion.
-- It is planned to make the second stage of classification of pure types "F" and "M" from those mixed with the accuracy metric
+- It is planned to make the second stage of classification of pure types "F" and "M" from those mixed with the accuracy metric.
 - Create a telegram bot as a simple deployment solution.
 - Create a second iteration of the test with the exclusion of unimportant questions and the addition of others to improve subsequent classification and confirm sociological hypotheses.
 
